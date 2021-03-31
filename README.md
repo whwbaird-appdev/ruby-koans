@@ -43,7 +43,7 @@ def test_assert_truth
 end
 ```
 
-Our job will be to modify these methods to make the "assertions" pass. The comments will guide you. In this case, change `false` to true, and then run `ruby path_to_enlightenment.rb` again. This test will pass, and next we'll be sent to Line 16. Keep going.
+Our job will be to modify these methods to make the **assertions** pass. The comments will guide you. In this case, change `false` to true, and then run `ruby path_to_enlightenment.rb` again. This test will pass, and next we'll be sent to Line 16. Keep going.
 
 ## Process
 
@@ -76,3 +76,11 @@ git add -A; git commit -m "Completed koan"
 ### Up-arrow to scroll through command-line history
 
 Remember to use your up and down arrows to scroll through your command-line and `irb` history, rather than retyping things.
+
+## Objectives
+
+With the koans, we're going to learn by seeing and doing. Primarily, our objectives are:
+
+ - Become familiar with how automated tests are written. So, pay attention to how they look.
+ - Expand our vocabulary of Ruby classes and methods.
+ - Deepen our understanding of the Ruby object model and Ruby idiom.
