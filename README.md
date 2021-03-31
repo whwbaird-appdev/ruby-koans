@@ -61,7 +61,7 @@ To figure out how to make the tests pass, a few tips:
 
 ### Clear terminal
 
-After each koan, remember to <kbd>Cmd</kbd>`+`<kbd>`K` (Mac) or <kbd>Ctrl</kbd>`+`<kbd>`K` (Windows) to clear your terminal.
+After each koan, remember to <kbd>Cmd</kbd>`+`<kbd>`K`</kbd> (Mac) or <kbd>Ctrl</kbd>`+`<kbd>`K`</kbd> (Windows) to clear your terminal.
 
 ### Git commits
 
