@@ -43,7 +43,7 @@ def test_assert_truth
 end
 ```
 
-Our job will be to modify these methods (each method is one **automated test**) to make the **assertions** pass. The comments will guide you. In this case, change `false` to true, and then run `ruby path_to_enlightenment.rb` again. This test will pass, and next we'll be sent to Line 16. Keep going.
+Our job will be to modify these methods (each method is one **automated test**) to make the **assertions** within pass. The comments will guide you. In this case, change `false` to true, and then run `ruby path_to_enlightenment.rb` again. This test will pass, and next we'll be sent to Line 16. Keep going.
 
 ## Process
 
