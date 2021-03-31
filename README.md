@@ -81,6 +81,6 @@ Remember to use your up and down arrows to scroll through your command-line and 
 
 With the koans, we're going to learn by seeing and doing. Primarily, our objectives are:
 
- - Become familiar with how automated tests are written. So, pay attention to how they look.
+ - Become familiar with how automated tests are written — soon, you're going to have to write them yourself. So, pay attention to how they look.
  - Expand our vocabulary of Ruby classes and methods.
  - Deepen our understanding of the Ruby object model and Ruby idiom.
