@@ -65,7 +65,7 @@ After each koan, remember to <kbd>Cmd</kbd>`+`<kbd>`K`</kbd> (Mac) or <kbd>Ctrl<
 
 ### Git commits
 
-I recommend also making a Git commit after each successful koan. We don't have our handy web `/git` interface, so you'll have to do it the old-fashioned way, from the command-line. To make a commit:
+I recommend also making a Git commit after each successful koan. We don't have our handy web `/git` interface here, so you'll have to do it the old-fashioned way, from the command-line. To make a commit:
 
 ```
 git add -A; git commit -m "Completed koan"
