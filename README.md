@@ -31,7 +31,7 @@ your path thus far [X_________________________________________________] 0/278 (0
 What just happened? The important bits:
 
  - `ruby path_to_enlightenment.rb`: The equivalent of `rails grade`; both are wrappers around an underlying command to run an automated test suite.
- - `Failed assertion.`: the test failure message.
+ - `Failed assertion.`: The test failure message.
  - `/Users/raghubetina/code/appdev-projects/ruby-koans/about_asserts.rb:10:in 'test_assert_truth'`: The file and line number of the test that failed.
 
 Let's go to that file, `about_asserts.rb`, and check out Line 10.
