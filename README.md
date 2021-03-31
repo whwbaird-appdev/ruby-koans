@@ -83,4 +83,4 @@ With the koans, we're going to learn by seeing and doing. Primarily, our objecti
 
  - Become familiar with how automated tests are written — soon, you're going to have to write them yourself. So, pay attention to how they look.
  - Expand our vocabulary of Ruby classes and methods.
- - Deepen our understanding of the Ruby object model and Ruby idiom.
+ - Deepen our understanding of the Ruby and Ruby idiom.
