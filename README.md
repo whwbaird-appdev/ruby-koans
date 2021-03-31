@@ -72,3 +72,7 @@ git add -A; git commit -m "Completed koan"
 ```
 
 (You can change the message inside the quotations to whatever you like each time.)
+
+### Up-arrow to scroll through command-line history
+
+Remember to use your up and down arrows to scroll through your command-line and `irb` history, rather than retyping things.
