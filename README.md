@@ -1,6 +1,6 @@
 # Ruby Koans
 
-We're going to do some of [The Ruby Koans](http://rubykoans.com/) (principally written by [@jimweirich](http://twitter.com/jimweirich) in order to deepen our understanding of the Ruby language, and of the Ruby community's culture. Over time you'll find that it, among other things, 1) highly values automated testing and 2) is very quirky. Welcome!
+We're going to do some of [The Ruby Koans](http://rubykoans.com/) (principally written by [@jimweirich](http://twitter.com/jimweirich)) in order to deepen our understanding of the Ruby language, and of the Ruby community's culture. Over time you'll find that it, among other things, 1) highly values automated testing and 2) is very quirky. Welcome!
 
 ## Getting started
 
