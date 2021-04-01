@@ -1,5 +1,4 @@
-image:
-  file: .gitpod.Dockerfile
+image: jelaniwoods/appdev2021-ruby-koans:spring
 
 ports:
   - port: 3000
