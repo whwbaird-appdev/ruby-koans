@@ -82,5 +82,10 @@ Remember to use your up and down arrows to scroll through your command-line and 
 With the koans, we're going to learn by seeing and doing. Primarily, our objectives are:
 
  - Become familiar with how automated tests are written — soon, you're going to have to write them yourself. So, pay attention to how they look.
+ - Practice reading other people's code.
  - Expand our vocabulary of Ruby classes and methods.
  - Deepen our understanding of Ruby and Ruby idiom.
+
+## Don't get hung up
+
+Some of the concepts and "THINK ABOUT IT"s in the Koans are really subtle and, to be honest, don't really come up often in the day-to-day of application development. Ruby developers with five years of experience would struggle to guess some of them (I sure did). Don't get hung up on any single thing for too long; make a note to discuss it in class and just keep moving!
