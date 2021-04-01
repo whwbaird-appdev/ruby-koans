@@ -51,7 +51,7 @@ Our job is to make the **assertions** within pass. In this project, the name of 
 
 To figure out how to make the tests pass, a few tips:
 
- 1. Try to remember your prior Ruby knowledge, but don't be alarmed if you don't know the answer. A lot of this is new — I learned many new things as I was preparing this assignment (e.g. [the `String#lines` method](https://ruby-doc.org/core-3.0.0/String.html#method-i-lines)).
+ 1. Try to remember your prior Ruby knowledge, but don't be alarmed if you don't know the answer. A lot of the material in the koans will be new to you — I learned many new things as I was preparing this assignment (e.g. [the `String#lines` method](https://ruby-doc.org/core-3.0.0/String.html#method-i-lines)).
  2. If you don't remember or don't know, take a moment and try to reason it out. Can you guess what the expected value should be?
  3. If not, open a terminal tab, launch `irb` to try out the Ruby expression that the assertion is being made about. You can see what the expected value is in `irb`.
  4. Or, you can simply run the test and see what the expected value is in the test failure message.
