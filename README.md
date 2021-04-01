@@ -43,7 +43,9 @@ def test_assert_truth
 end
 ```
 
-Our job will be to modify these methods (every method whose name begins with `test_` is one **automated test**) to make the **assertions** within pass. The comments will guide you. In this case, change `false` to true, and then run `ruby path_to_enlightenment.rb` again. This test will pass, and next we'll be sent to Line 16. Keep going.
+Every method whose name begins with `test_` is one **automated test**. Usually, the rest of the method's name will describe what is being tested.
+
+Our job is to make the **assertions** within pass. The comments will guide you. In this case, change `false` to true, and then run `ruby path_to_enlightenment.rb` again. This test will pass, and next we'll be sent to Line 16. Keep going.
 
 ## Process
 
