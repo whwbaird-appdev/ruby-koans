@@ -73,7 +73,7 @@ RUN /bin/bash -l -c "gem install shotgun"
 
 WORKDIR /base-rails
 
-RUN /bin/bash -l -c "wget  -O bin/hotfix_shotgun 'https://raw.githubusercontent.com/jelaniwoods/dotfiles/master/hotfix_shotgun' && chmod 777 bin/hotfix_shotgun && bin/hotfix_shotgun"
+RUN /bin/bash -l -c "wget  -O hotfix_shotgun 'https://raw.githubusercontent.com/jelaniwoods/dotfiles/master/hotfix_shotgun' && chmod 777 hotfix_shotgun && hotfix_shotgun"
 
 # USER root
 # RUN mkdir /workspace && chmod 755 /workspace
