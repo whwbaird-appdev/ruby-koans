@@ -73,6 +73,7 @@ RUN /bin/bash -l -c "gem install shotgun"
 
 WORKDIR /base-rails
 
+USER root
 RUN /bin/bash -l -c "wget  -O hotfix_shotgun 'https://raw.githubusercontent.com/jelaniwoods/dotfiles/master/hotfix_shotgun' && chmod 777 hotfix_shotgun && hotfix_shotgun"
 
 # USER root
