@@ -70,6 +70,9 @@ USER gitpod
 RUN /bin/bash -l -c "gem install htmlbeautifier"
 RUN /bin/bash -l -c "gem install rufo"
 RUN /bin/bash -l -c "gem install shotgun"
+RUN /bin/bash -l -c "gem install webrick"
+RUN /bin/bash -l -c "gem install specific_install"
+RUN /bin/bash -l -c "gem specific_install https://github.com/firstdraft/web_git.git -b spring2020"
 
 WORKDIR /base-rails
 
