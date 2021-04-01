@@ -69,6 +69,7 @@ USER gitpod
 # AppDev stuff
 RUN /bin/bash -l -c "gem install htmlbeautifier"
 RUN /bin/bash -l -c "gem install rufo"
+RUN /bin/bash -l -c "gem install shotgun"
 
 WORKDIR /base-rails
 # USER root
@@ -86,5 +87,4 @@ RUN /bin/bash -l -c "curl https://cli-assets.heroku.com/install.sh | sh"
 RUN sudo apt install -y libpq-dev psmisc lsof
 USER gitpod
 RUN echo 'export PATH="$PATH:$GITPOD_REPO_ROOT/bin"' >> ~/.bashrc
-RUN echo "rvm use 3.0.0" >> ~/.bashrc
-RUN echo "rvm_silence_path_mismatch_check_flag=1" >> ~/.rvmrc
+
