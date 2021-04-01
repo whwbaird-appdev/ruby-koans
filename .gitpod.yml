@@ -1,7 +1,6 @@
 image:
   file: .gitpod.Dockerfile
-tasks:
-  - init: bin/setup
+
 ports:
   - port: 3000
     onOpen: open-preview
