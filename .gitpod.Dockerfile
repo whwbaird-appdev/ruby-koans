@@ -67,31 +67,68 @@ RUN echo "rvm_gems_path=/home/gitpod/.rvm" > ~/.rvmrc
 
 USER gitpod
 # AppDev stuff
-RUN /bin/bash -l -c "gem install htmlbeautifier"
-RUN /bin/bash -l -c "gem install rufo"
-RUN /bin/bash -l -c "gem install shotgun"
-RUN /bin/bash -l -c "gem install webrick"
-RUN /bin/bash -l -c "gem install specific_install"
-RUN /bin/bash -l -c "gem specific_install https://github.com/firstdraft/web_git.git -b spring2020"
+RUN /bin/bash -l -c "gem install htmlbeautifier rufo -N"
 
 WORKDIR /base-rails
+COPY Gemfile /base-rails/Gemfile
+COPY Gemfile.lock /base-rails/Gemfile.lock
+# For some reason, the copied files were owned by root so bundle could not succeed
+RUN /bin/bash -l -c "sudo chown -R $(whoami):$(whoami) Gemfile Gemfile.lock"
+USER gitpod
+# Pre-install gems in Gemfile
+RUN /bin/bash -l -c "bundle install"
 
 USER root
-RUN /bin/bash -l -c "wget  -O hotfix_shotgun 'https://raw.githubusercontent.com/jelaniwoods/dotfiles/master/hotfix_shotgun' && chmod 777 hotfix_shotgun && ./hotfix_shotgun"
-
 # USER root
 # RUN mkdir /workspace && chmod 755 /workspace
 USER gitpod
 
 RUN /bin/bash -l -c "curl https://cli-assets.heroku.com/install.sh | sh"
 
+# Git global configuration
+RUN git config --global push.default upstream \
+    && git config --global merge.ff only \
+    && git config --global alias.acm '!f(){ git add -A && git commit -am "${*}"; };f' \
+    && git config --global alias.as '!git add -A && git stash' \
+    && git config --global alias.p 'push' \
+    && git config --global alias.sla 'log --oneline --decorate --graph --all' \
+    && git config --global alias.co 'checkout' \
+    && git config --global alias.cob 'checkout -b'
+
+# Alias 'git' to 'g'
+RUN echo 'export PATH="$PATH:$GITPOD_REPO_ROOT/bin"' >> ~/.bashrc
+RUN echo "# No arguments: 'git status'\n\
+# With arguments: acts like 'git'\n\
+g() {\n\
+  if [[ \$# > 0 ]]; then\n\
+    git \$@\n\
+  else\n\
+    git status\n\
+  fi\n\
+}\n# Complete g like git\n\
+source /usr/share/bash-completion/completions/git\n\
+__git_complete g __git_main" >> ~/.bash_aliases
+
+# Add current git branch to bash prompt
+RUN echo "# Add current git branch to prompt\n\
+parse_git_branch() {\n\
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \\\(.*\\\)/:(\\\1)/'\n\
+}\n\
+\n\
+PS1='\[]0;\u \w\]\[[01;32m\]\u\[[00m\] \[[01;34m\]\w\[[00m\]\[\e[0;38;5;197m\]\$(parse_git_branch)\[\e[0m\] \\\$ '" >> ~/.bashrc
+
+# Hack to pre-install bundled gems
+RUN echo "rvm use 3.0.0" >> ~/.bashrc
+RUN echo "rvm_silence_path_mismatch_check_flag=1" >> ~/.rvmrc
 # RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
 # RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
 
 # # RUN sudo apt-get update && sudo apt-get install -y nodejs yarn postgresql-client
 # RUN sudo apt-get update && sudo apt-get install -y yarn
 # RUN sudo apt install -y postgresql postgresql-contrib libpq-dev psmisc lsof
+# Install fuser
 RUN sudo apt install -y libpq-dev psmisc lsof
 USER gitpod
+# Add bin/ to PATH
 RUN echo 'export PATH="$PATH:$GITPOD_REPO_ROOT/bin"' >> ~/.bashrc
 
